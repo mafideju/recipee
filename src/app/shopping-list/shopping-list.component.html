@@ -1,12 +1,14 @@
   <div class="row">
     <div class="col-sm-12">
-      <app-shopping-list-edit></app-shopping-list-edit>
+      <app-shopping-list-edit
+        (ingredientAdded)="onIngredientAdded($event)"
+      ></app-shopping-list-edit>
       <ul class="list-group clearfix w-100">
         <li style="cursor: pointer;" *ngFor="let ingredient of ingredients">
           <a
             class="list-group-item"
           >
-            {{ ingredient.name }} {{ ingredient.amount }} <small>gramas</small>
+            {{ ingredient.name }} {{ ingredient.amount }} <small>{{ ingredient.unit | lowercase }}</small>
           </a>
         </li>
       </ul>
