@@ -18,9 +18,33 @@
           <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Lista de Compras</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group open">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+            >
+             Receitas <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li href="#">Save</li>
+              <li href="#">Load</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- <ul class="nav navbar-nav navbar-right" appDropdown>
+        <li class="nav-item dropdown" appDropdown>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Dados
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -28,7 +52,7 @@
             <a class="dropdown-item" href="#">Load</a>
           </div>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
