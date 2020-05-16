@@ -1,0 +1,69 @@
+<mat-card class="container">
+  <mat-card-header>
+    <h1>Gerador de Senhas</h1>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form>
+        <mat-form-field>
+          <mat-label>Quantos Caracteres Terá Sua Senha?</mat-label>
+          <input
+            matInput
+            type="number"
+            min="0"
+            placeholder="Digite Aqui Apenas Numeros Inteiros e Positivos"
+            name="input"
+            id="input"
+            (input)="passwordLengthChange($event.target.value)"
+            >
+        </mat-form-field>
+
+        <mat-label style="margin-bottom: 0.5rem;">Quais Tipos de Caracteres Deve Conter?</mat-label>
+        <mat-checkbox
+          matInput
+          type="checkbox"
+          id="numbers"
+          color="primary"
+          (change)="useNumbers()"
+        >
+          Numeros?
+        </mat-checkbox>
+        <mat-checkbox
+          matInput
+          type="checkbox"
+          id="letters"
+          color="primary"
+          (change)="useLetters()"
+        >
+          Letras?
+        </mat-checkbox>
+        <mat-checkbox
+          matInput
+          type="checkbox"
+          id="specials"
+          color="primary"
+          (change)="useSpecials()"
+        >
+          Especiais?
+        </mat-checkbox>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div class="button-container">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onGeneratePassword()"
+        [disabled]="!(passwordLength && (changeLetters || changeNumber || changeSpecials))"
+      >
+        Gerar Senha
+      </button>
+    </div>
+  </mat-card-actions>
+
+  <div *ngIf="password" class="results-container">
+    <h4>Senha Gerada:</h4>
+    <h2>{{ password }}</h2>
+  </div>
+</mat-card>
