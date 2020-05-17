@@ -1,0 +1,6 @@
+.container {
+  margin: 0 auto;
+}
+.container mat-card {
+  margin: 1rem;
+}

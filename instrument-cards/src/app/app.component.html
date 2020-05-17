@@ -1,0 +1,9 @@
+<div class="card-container" *ngFor="let post of posts">
+  <app-card
+    [title]="post.title"
+    [subtitle]="post.subtitle"
+    [image]="post.image"
+    [content]="post.content"
+  >
+  </app-card>
+</div>
