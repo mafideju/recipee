@@ -6,3 +6,6 @@ https://password-generator-teal.now.sh
 
 ## Instrument Cards:
 https://instrument-cards.now.sh/
+
+## Typing Game:
+https://typing-game-azure.now.sh/
