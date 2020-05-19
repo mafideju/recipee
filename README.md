@@ -12,3 +12,6 @@ https://typing-game-azure.now.sh/
 
 ## Data Piping:
 https://piping-form.now.sh/
+
+## Paginating Master:
+https://paginating-pics.now.sh/
