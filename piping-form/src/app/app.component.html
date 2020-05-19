@@ -1,0 +1,94 @@
+<div class="card__container">
+  <mat-card>
+    <mat-card-content>
+      <form class="card__form">
+        <mat-form-field class="card__name">
+          <mat-label>Nome: </mat-label>
+          <input
+            matInput
+            autocomplete="off"
+            placeholder="Ex. Pizza"
+            type="text"
+            (input)="onNameChange($event.target.value)"
+          >
+        </mat-form-field>
+        <p>Saída: {{ name | titlecase }}</p>
+
+        <mat-form-field class="card__date">
+          <mat-label>Data: </mat-label>
+
+          <input
+            matInput
+            autocomplete="off"
+            placeholder="Ex. Pizza"
+            type="date"
+            (input)="onDateChange($event.target.value)"
+            >
+            <!-- [matDatepicker]="picker" -->
+          <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
+          <!-- <mat-datepicker #picker></mat-datepicker> -->
+        </mat-form-field>
+        <p>Saída: {{ date | date : 'dd/MMMM/yyyy - EEEE - HH:mm:ss' }}</p>
+
+        <mat-form-field class="card__amount">
+          <mat-label>Quantia: </mat-label>
+          <input
+            matInput
+            autocomplete="off"
+            placeholder="Ex. Pizza"
+            type="number"
+            (input)="onAmountChange($event.target.value)"
+          >
+        </mat-form-field>
+        <p>Saída: {{ amount | currency : 'BRL' }}</p>
+
+        <mat-form-field class="card__decimal">
+          <mat-label>Decimal: </mat-label>
+          <input
+            matInput
+            autocomplete="off"
+            placeholder="Ex. Pizza"
+            type="number"
+            (input)="onDecimalChange($event.target.value)"
+          >
+        </mat-form-field>
+        <p>Saída: {{ decimal | number : '3.2-2' }}</p>
+        <!-- minIntegerDigits: The minimum number of integer digits before the decimal point. Default is 1.
+            minFractionDigits: The minimum number of digits after the decimal point. Default is 0.
+            maxFractionDigits: The maximum number of digits after the decimal point. Default is 3. -->
+
+            <mat-form-field class="card__decimal">
+              <mat-label>JSON: </mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Ex. Pizza"
+                type="text"
+                (input)="onJSONChange($event.target.value)"
+              >
+            </mat-form-field>
+            <p>Saída: {{ json | json }}</p>
+
+            <mat-form-field class="card__decimal">
+              <mat-label>Entrada - KM: </mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Ex. Pizza"
+                type="number"
+                (input)="onMilesChange($event.target.value)"
+              >
+            </mat-form-field>
+            <p>Saída: {{ miles | converter }} Milhas</p>
+
+        </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<!-- mat-card-title
+mat-card-subtitle
+mat-card-content
+mat-card-actions
+mat-card-footer -->
