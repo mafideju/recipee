@@ -1,0 +1,33 @@
+.container {
+  width: 35rem;
+  margin: 0 auto;
+}
+.container__title {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  padding: 3rem;
+}
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container__header--count {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 0.25rem;
+}
+.container__header--count:hover {
+  background-color: white;
+  color: black;
+}
+.container img {
+  width: 100%;
+}
+.active {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,31 @@
+
+<div class="container">
+  <h1 class="container__title">Paginando Mestres do Jazz</h1>
+  <div
+    *ngFor="let object of objects; let i = index"
+    [ngClass]="{ active: i === currentPage }"
+  >
+    <div class="container__header">
+      <h2 class="container__header--title">{{ object.title }}</h2>
+      <h3 class="container__header--instrument">{{ object.instrument }}</h3>
+      <a class="container__header--count">{{ i + 1 }}</a>
+    </div>
+    <img [src]="object.image">
+  </div>
+</div>
+
+
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="pageEvent = $event"
+               showFirstLastButtons
+               >
+</mat-paginator>
+
+<div *ngIf="pageEvent">
+  <h5>Page Change Event Properties</h5>
+  <div>List length: {{ pageEvent.length }}</div>
+  <div>Page size: {{ pageEvent.pageSize }}</div>
+  <div>Page index: {{ pageEvent.pageIndex }}</div>
+</div>
