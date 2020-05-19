@@ -1,0 +1,40 @@
+.full-width-table {
+  width: 100%;
+  min-height: 90vh;
+  max-height: 100vh;
+}
+
+.data-table {
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.divider{
+  height: 1px;
+  border: 3px black solid;
+}
+
+td {
+  display: flex;
+  justify-content: center;
+  .image {
+    box-shadow: 5px 5px 8px #222222, 10px 10px 8px #333333, 15px 15px 8px #555555;
+    width: 100%;
+    max-width: 40rem;
+    max-height: 70vh;
+    margin: 1rem 0;
+    // padding: 2rem 0 1.8rem 0;
+    @media screen and (max-width: 500px) {
+      width: 80%;
+      margin-left: 1.2rem;
+    }
+  }
+}
+
+.last-td {
+  border-bottom: 1rem rgba(25, 25, 25, .5) solid;
+}

@@ -6,17 +6,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatSortModule,
     MatPaginatorModule,
-    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
