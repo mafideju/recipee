@@ -1,10 +1,4 @@
-.full-width-table {
-  width: 100%;
-  min-height: 90vh;
-  max-height: 100vh;
-}
-
-.data-table {
+.datatable__container {
   width: 80%;
   margin: 0 auto;
 
@@ -13,9 +7,10 @@
   }
 }
 
-.divider{
-  height: 1px;
-  border: 3px black solid;
+.datatable__container--table {
+  width: 100%;
+  min-height: 90vh;
+  max-height: 100vh;
 }
 
 td {
@@ -27,7 +22,7 @@ td {
     max-width: 40rem;
     max-height: 70vh;
     margin: 1rem 0;
-    // padding: 2rem 0 1.8rem 0;
+
     @media screen and (max-width: 500px) {
       width: 80%;
       margin-left: 1.2rem;

@@ -1,0 +1,42 @@
+<div>
+  <h3>{{ classics[currentPage].title }}</h3>
+  <h3>{{ classics[currentPage].artist }}</h3>
+  <img [src]="classics[currentPage].coverImage">
+</div>
+
+
+<nav >
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
+      <a
+        class="page-link"
+        href="#"
+        (click)="currentPage = currentPage - 1"
+
+      >
+        Anterior
+      </a>
+    </li>
+
+    <ng-container *ngFor="let classic of classics; let i = index">
+      <li
+        class="page-item"
+        *ngIf="actualGroupIndex(i)"
+        [ngClass]="{ active: i === currentPage }"
+        >
+        <a class="page-link" href="#" (click)="currentPage = i">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
+
+    <li class="page-item" [ngClass]="{ disabled: currentPage === classics.length - 1 }">
+      <a
+        class="page-link"
+        href="#"
+        (click)="currentPage = currentPage + 1"
+      >
+        Próxima
+      </a>
+    </li>
+  </ul>
+</nav>
+
