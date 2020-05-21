@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionsHomeComponent implements OnInit {
   musicians = [
-    { name: 'Coltrane', instrument: 'Sax', masterpiece: 'Love Supreme' },
-    { name: 'Davis', instrument: 'Trumpet', masterpiece: 'Kind of Blue' },
-    { name: 'Mingus', instrument: 'Bass', masterpiece: 'Ah Um' },
+    { name: 'Miles Davis', instrument: 'Trumpet', masterpiece: 'Kind of Blue' },
+    { name: 'Wayne Shorter', instrument: 'Saxophone', masterpiece: 'Speak No Evil' },
+    { name: 'Paul Chambers', instrument: 'Bass', masterpiece: '1st Bassman' },
+    { name: 'Art Blakey', instrument: 'Drums', masterpiece: 'The Jazz Messangers' },
+    { name: 'Josef Zawinul', instrument: 'Piano', masterpiece: 'Zawinul' },
   ];
 
   headers = [

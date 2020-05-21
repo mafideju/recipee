@@ -1,11 +1,9 @@
 .ui.sticky.fixed {
-  left: 0!important;
+  left: 0 !important;
 }
-
 .inverting {
-  background-color: whitesmoke!important;
+  background-color: whitesmoke !important;
 }
-
 .title-container {
   display: flex;
   justify-content: center;

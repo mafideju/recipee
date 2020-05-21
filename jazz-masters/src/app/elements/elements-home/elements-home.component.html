@@ -1,16 +1,79 @@
-<app-divider> Placeholder Base </app-divider>
-<app-placeholder
-  [header]="true"
-  [lines]="10"
-  [headerLines]="2"
-></app-placeholder>
+<!-- <div *ngIf="loading">
+  <app-divider> Placeholder Base </app-divider>
+  <app-placeholder
+    [header]="true"
+    [lines]="10"
+    [headerLines]="0"
+  ></app-placeholder>
+</div> -->
 
-<app-divider> Segment Thing </app-divider>
+<article *ngIf="!loading">
+  <app-divider class="title-centered"> Miles Davis Great Imaginary Quintet </app-divider>
+  <img class="ui medium circular centered image" src="https://cdn.smehost.net/milesdaviscom-uslegacyprod/wp-content/uploads/2016/10/161018_wsj_premiere.jpg">
+  <div class="ui raised segment">
+    <h3>First Great Quintet - 1955/1957</h3>
+    <p>
+      In the first half of 1955 Miles Davis was in a much better shape than he was in a long time.
+      After kicking his heroin habit at his father’s house in 1953, he came back to New York City
+      a more complete musician. His tone on the trumpet improved and so his ability to lead groups
+      of musicians at recording sessions and in clubs. The quality of his 1954 studio output for
+      Prestige exceeded most of his early 1950s recordings and yielded some of the best records
+      in his career thus far: Walkin’, Bag’s Groove and Miles Davis and the Modern Jazz Giants.
+      He was ready to move on to the next stage of his career, gain wider recognition and prestige
+       than what his current label (Prestige, ironically) could give him and no less important –
+       make more money. Two factors in his professional life were lacking and prevented
+       him from reaching his goals – a bigger, nationwide record label, and a stable working
+       band of excellent musicians. But starting in June 1955 events started unfolding at an
+       accelerated pace for Miles. This is the story of his first classic quintet and the
+       recordings they made in 1955 and 1956, including some of the most revered albums in jazz
+       history.
+    </p>
+    <p>
+      Miles Davis was more than a trumpet player, composer and taste-maker—he led some of the
+      greatest bands in the history of jazz. The main musicians from his first great
+      quintet was John Coltrane on tenor, Red Garland on piano, Paul Chambers on bass and
+      Philly Joe Jones on drums.
+    </p>
+    <p>
+      Source (external link): <a href="https://musicaficionado.blog/2018/03/20/the-miles-davis-quintet-recordings-1955-1956/" target="_blank">Music Aficionado</a>
+    </p>
+  </div>
+  <div class="ui raised segment">
+    <h3>Second Great Quintet - 1965/1968</h3>
+    <p>
+      Miles Davis second great quintet -- Wayne Shorter on saxophone, Herbie Hancock on piano,
+      Ron Carter on bass and Tony Williams on drums -- left behind four of the more perfect albums
+      in acoustic jazz history. The records -- ''Miles Smiles,'' ''E.S.P,'' ''Sorcerer''
+      and ''Nefertiti'' -- brought jazz to an extraordinary level of interaction, changing the
+      parameters for group improvisation. Then in 1967, everything changed: Davis
+      and the group started playing with electric instruments and pop textures, and the albums
+      receded into history, albeit beautiful history.
+    </p>
+    <p>
+      At the time, the achievements of these four albums were overshadowed by music that
+      was more extreme. The music of John Coltrane and Ornette Coleman and even Davis's own
+      subsequent electric music grabbed more attention. There was little indication that the
+      four quintet albums would become some of the most influential recordings in jazz.
+      But they are now acknowledged as masterpieces, the paradigm for the great jazz revolution
+      of the 1980's led by the Marsalis brothers. And for completely different reasons,
+      they have become extremely influential with young jazz musicians in the 90's as well.
+      The albums have just been repackaged and reissued by Columbia Records as the six-CD
+      boxed set ''Miles Davis Quintet, 1965-68.'' The set is the third installment in
+      a series devoted to the music of Davis (who died in 1991), with at least seven planned.
+      Future boxes, for example, include a three-CD set given over to a single album,
+      ''In Silent Way.'' The series is one of the most ambitious reissue programs in jazz.
+    </p>
+    <p>
+      Source (external link): <a href="https://www.nytimes.com/1998/03/29/arts/recordings-view-miles-davis-s-mid-60-s-quintet-reverberates-inside-jazz-s-head.html" target="_blank">The New York Times</a>
+    </p>
+  </div>
+</article>
+
+<!-- <app-divider> Segment Thing </app-divider>
 <app-segment>
-
   <header>
     <i class="pdf file outline icon"></i>
       Este cliente não possui contratos.
   </header>
   <div button class="ui primary button">Novo Documento</div>
-</app-segment>
+</app-segment> -->
