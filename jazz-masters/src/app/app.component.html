@@ -1,6 +1,40 @@
-<a routerLink="/elements">Elements</a>
-<a routerLink="/collections">Collections</a>
-<a routerLink="/views">Views</a>
-<a routerLink="/mods">Mods</a>
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a
+      routerLinkActive="active"
+      class="item"
+      routerLink="/elements"
+    >
+      Elements
+    </a>
 
-<router-outlet></router-outlet>
+    <a
+      routerLinkActive="active"
+      class="item"
+      routerLink="/collections"
+    >
+      Collections
+    </a>
+
+    <a
+      routerLinkActive="active"
+      class="item"
+      routerLink="/views"
+    >
+      Views
+    </a>
+
+    <a
+      routerLinkActive="active"
+      class="item"
+      routerLink="/mods"
+    >
+      Mods
+    </a>
+
+  </div>
+  <div class="ui segment">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

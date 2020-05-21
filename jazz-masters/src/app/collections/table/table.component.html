@@ -1,0 +1,13 @@
+<app-divider> Table Bable </app-divider>
+<table class="ui table" [ngClass]="classNames">
+  <thead>
+    <tr>
+      <th *ngFor="let row of headers">{{ row.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let musician of musicians">
+      <td *ngFor="let row of headers">{{ musician[row.key] }}</td>
+    </tr>
+  </tbody>
+</table>
