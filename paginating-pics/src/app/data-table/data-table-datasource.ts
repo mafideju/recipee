@@ -6,22 +6,36 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface DataTableItem {
-  instrument: string;
   title: string;
-  image: string;
+  artist: string;
+  coverImage: string;
 }
 
-// TODO: replace this with real data from your application
-const EXAMPLE_DATA: DataTableItem[] = [
-      { instrument: 'Trumpet', title: 'Louis Armstrong', image: 'assets/images/armstrong.jpg' },
-      { instrument: 'Bass Guitar', title: 'Jaco Pastorius', image: 'assets/images/pastorius.jpg' },
-      { instrument: 'Trumpet', title: 'Winston Marsalis', image: 'assets/images/marsalis.jpg' },
-      { instrument: 'Tenor Saxophone', title: 'John Coltrane', image: 'assets/images/coltrane.jpg' },
-      { instrument: 'DrumKit', title: 'Art Blakey', image: 'assets/images/blakey.jpg' },
-      { instrument: 'Bass', title: 'Charles Mingus', image: 'assets/images/mingus.jpg' },
-      { instrument: 'Singer/Song Writer', title: 'Joni Mitchell', image: 'assets/images/mitchell.jpg' },
-      { instrument: 'Tenor Saxophone', title: 'Wayne Shorter', image: 'assets/images/shorter.jpg' },
-      { instrument: 'Piano/Synths', title: 'Joe Zawinul', image: 'assets/images/zawinul.jpg' },
+// // TODO: replace this with real data from your application
+// const EXAMPLE_DATA: DataTableItem[] = [
+//       { instrument: 'Trumpet', title: 'Louis Armstrong', image: 'assets/images/armstrong.jpg' },
+//       { instrument: 'Bass Guitar', title: 'Jaco Pastorius', image: 'assets/images/pastorius.jpg' },
+//       { instrument: 'Trumpet', title: 'Winston Marsalis', image: 'assets/images/marsalis.jpg' },
+//       { instrument: 'Tenor Saxophone', title: 'John Coltrane', image: 'assets/images/coltrane.jpg' },
+//       { instrument: 'DrumKit', title: 'Art Blakey', image: 'assets/images/blakey.jpg' },
+//       { instrument: 'Bass', title: 'Charles Mingus', image: 'assets/images/mingus.jpg' },
+//       { instrument: 'Singer/Song Writer', title: 'Joni Mitchell', image: 'assets/images/mitchell.jpg' },
+//       { instrument: 'Tenor Saxophone', title: 'Wayne Shorter', image: 'assets/images/shorter.jpg' },
+//       { instrument: 'Piano/Synths', title: 'Joe Zawinul', image: 'assets/images/zawinul.jpg' },
+// ];
+
+const EXAMPLE_DATA: DataTableItem[]  = [
+  { title: 'Hejira', artist: 'Joni Mitchell', coverImage: 'assets/images/mitchell.jpg' },
+  { title: 'Kind of Blue', artist: 'Miles Davis', coverImage: 'assets/images/davis.jpg' },
+  { title: 'Black Market', artist: 'Weather Report', coverImage: 'assets/images/weather.jpg' },
+  { title: 'Blue Train', artist: 'John Coltrane', coverImage: 'assets/images/coltrane.jpg' },
+  { title: 'Mingus Ah Um', artist: 'Charles Mingus', coverImage: 'assets/images/mingus.jpg' },
+  { title: 'Maria Fumaça', artist: 'Banda Black Rio', coverImage: 'assets/images/blackrio.jpg' },
+  { title: 'Bird and Diz', artist: 'Charlie Parker & Dizzy Gillespie', coverImage: 'assets/images/parker.jpg' },
+  { title: 'Buena Vista Social Club', artist: 'Buena Vista Social Club', coverImage: 'assets/images/buenavista.jpg' },
+  { title: 'Art Blakey and The Jazz Messengers', artist: 'Art Blakey and The Jazz Messengers', coverImage: 'assets/images/blakey.jpg' },
+  { title: 'Jaco Pastorius', artist: 'Jaco Pastorius', coverImage: 'assets/images/jaco.jpg' },
+  { title: 'King of Prussia', artist: 'Frank Zappa', coverImage: 'assets/images/zappa.jpg' }
 ];
 
 /**
@@ -84,9 +98,9 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'instrument': return compare(a.instrument, b.instrument, isAsc);
         case 'title': return compare(a.title, b.title, isAsc);
-        case 'image': return compare(a.image, b.image, isAsc);
+        case 'artist': return compare(a.artist, b.artist, isAsc);
+        case 'coverImage': return compare(a.coverImage, b.coverImage, isAsc);
         default: return 0;
       }
     });
