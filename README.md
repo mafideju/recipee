@@ -15,3 +15,6 @@ https://piping-form.now.sh/
 
 ## Paginating Jazz Classics:
 https://paginating-pics.now.sh/
+
+## Jazz Masters
+https://jazz-masters.now.sh/
