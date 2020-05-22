@@ -1,0 +1,18 @@
+<div class="ui dimmer visible active" (click)="onCloseClick()">
+  <div class="ui modal visible active">
+    <div class="header">
+      <h1>Modal Jazz</h1>
+      <i class="icon close" (click)="onCloseClick()"></i>
+    </div>
+
+    <div class="content" *ngFor="let row of classics; let i = index">
+      {{ row | json }}
+      <h2>{{ row.artist }}</h2>
+      <!-- <img class="image" [src]="row.image"> -->
+    </div>
+
+    <div class="actions">
+      <button class="ui black button" (click)="onCloseClick()">Jazz</button>
+    </div>
+  </div>
+</div>

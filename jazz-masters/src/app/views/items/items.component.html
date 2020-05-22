@@ -4,16 +4,18 @@
       <img [src]="row.image">
     </div>
     <div class="content">
-      <a class="header">{{ row.title }}</a>
-      <div class="meta">
+      <h1 class="header">{{ row.title }}</h1>
+      <!-- <div class="meta">
         <span class="cinema">{{ row.place }}</span>
-      </div>
-      <div class="description">
-        <p>{{ row.text ? row.text : 'No Description' }}</p>
+      </div> -->
+      <div class="extra">
+        <div class="ui label"><i class="icon arrow alternate circle right outline"></i>{{ row.text ? row.text : 'No Description' }}</div>
       </div>
       <div class="extra">
-        <div class="ui label">{{ row.tech }}</div>
-        <!-- <div class="ui label"><i class="globe icon"></i> Additional Languages</div> -->
+        <div class="ui label"><i class="icon hourglass outline"></i>{{ row.tech }}</div>
+      </div>
+      <div class="extra">
+        <div class="ui label"><i class="icon circle outline"></i>{{ row.place }}</div>
       </div>
     </div>
   </div>

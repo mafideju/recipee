@@ -1,1 +1,11 @@
-<p>mods-home works!</p>
+<app-divider class="title-centered">Modal Jazz</app-divider>
+<div *ngFor="let row of classics; let i = index" class="ui segment">
+  <div class="image-container">
+    <img class="image" (click)="onClick()" [src]="row.image">
+    <app-modal *ngIf="modalOpen" (close)="onClick()" [classics]="classics"></app-modal>
+  </div>
+
+  <!-- <div class="actions">
+    <button class="ui fluid inverted brown button" (click)="onClick()">Open Jazz</button>
+  </div> -->
+</div>

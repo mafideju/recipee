@@ -1,0 +1,14 @@
+// .ui.segment>div.actions {
+//   display: flex;
+//   justify-content: center;
+// }
+
+.image-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  .image {
+    width: 50%;
+    cursor: pointer;
+  }
+}

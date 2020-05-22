@@ -1,0 +1,16 @@
+.ui.modal.visible.active>div.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: -.5rem;
+  }
+  i {
+    cursor: pointer;
+  }
+}
+
+div.content>img.image {
+  width: 100%;
+}
