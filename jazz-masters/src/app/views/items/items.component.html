@@ -1,0 +1,20 @@
+<div class="ui divided items">
+  <div class="item" *ngFor="let row of items">
+    <div class="image">
+      <img [src]="row.image">
+    </div>
+    <div class="content">
+      <a class="header">{{ row.title }}</a>
+      <div class="meta">
+        <span class="cinema">{{ row.place }}</span>
+      </div>
+      <div class="description">
+        <p>{{ row.text ? row.text : 'No Description' }}</p>
+      </div>
+      <div class="extra">
+        <div class="ui label">{{ row.tech }}</div>
+        <!-- <div class="ui label"><i class="globe icon"></i> Additional Languages</div> -->
+      </div>
+    </div>
+  </div>
+</div>

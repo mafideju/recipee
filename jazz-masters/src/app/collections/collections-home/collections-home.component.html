@@ -4,4 +4,27 @@
   [classNames]="'striped celled'"
 ></app-table>
 
-<router-outlet></router-outlet>
+<app-tabs>
+  <a
+    class="item"
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Bio
+  </a>
+  <a
+    class="item"
+    routerLink="bands"
+    routerLinkActive="active"
+    >
+      Bands
+  </a>
+  <a
+    class="item"
+    routerLink="partners"
+    routerLinkActive="active"
+    >
+      Parças
+  </a>
+</app-tabs>

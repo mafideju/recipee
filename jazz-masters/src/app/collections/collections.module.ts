@@ -8,10 +8,11 @@ import { WidgetModule } from '../widget/widget.module';
 import { BioComponent } from './bio/bio.component';
 import { BandsComponent } from './bands/bands.component';
 import { PartnersComponent } from './partners/partners.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 @NgModule({
-  declarations: [CollectionsHomeComponent, TableComponent, BioComponent, BandsComponent, PartnersComponent],
+  declarations: [CollectionsHomeComponent, TableComponent, BioComponent, BandsComponent, PartnersComponent, TabsComponent],
   imports: [
     CommonModule,
     CollectionsRoutingModule,

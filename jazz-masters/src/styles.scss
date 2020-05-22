@@ -1,7 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 @import 'semantic-ui-css/semantic.min.css';
+
+body {
+  background-color: #333333;
+}
 
 .title-centered {
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem;
 }

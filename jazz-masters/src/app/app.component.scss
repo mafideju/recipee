@@ -1,5 +1,6 @@
 .ui.sticky.fixed {
   left: 0!important;
+  height: 4.5vh;
 }
 
 .inverting {
@@ -11,4 +12,10 @@
   justify-content: center;
   align-items: center;
   margin: 0 3%;
+
+  &--link {
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+  }
 }

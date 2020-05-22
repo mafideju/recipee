@@ -1,5 +1,9 @@
 @import url(semantic-ui-css/semantic.min.css);
+body {
+  background-color: #333333;
+}
 .title-centered {
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem;
 }
