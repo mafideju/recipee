@@ -1,0 +1,11 @@
+<div class="ui styled fluid accordion">
+  <ng-container  *ngFor="let row of accords; let i = index">
+    <div [ngClass]="{ active: i === openedItemIndex }" class="title" (click)="toggleAccord(i)">
+      <i class="dropdown icon"></i>
+      {{ row.title }}
+    </div>
+    <div [ngClass]="{ active: i === openedItemIndex }" class="content">
+      <p>{{ row.content }}</p>
+    </div>
+  </ng-container>
+</div>

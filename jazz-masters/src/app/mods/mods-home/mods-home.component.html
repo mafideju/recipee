@@ -1,11 +1,26 @@
-<app-divider class="title-centered">Modal Jazz</app-divider>
-<div *ngFor="let row of classics; let i = index" class="ui segment">
-  <div class="image-container">
-    <img class="image" (click)="onClick()" [src]="row.image">
-    <app-modal *ngIf="modalOpen" (close)="onClick()" [classics]="classics"></app-modal>
+<div class="ui segment">
+  <app-divider class="title-centered">Modal Jazz</app-divider>
+  <div *ngFor="let row of classics">
+    <div class="image-container">
+      <img class="image" (click)="onClick()" [src]="row.image">
+    </div>
   </div>
+</div>
 
-  <!-- <div class="actions">
-    <button class="ui fluid inverted brown button" (click)="onClick()">Open Jazz</button>
-  </div> -->
+<app-modal *ngIf="modalOpen" (close)="onClick()" [classics]="classics">
+  <div *ngFor="let row of classics">
+    <div class="header" header>
+      <!-- <h1>Modal Jazz</h1> -->
+      <!-- <i class="icon close" (click)="onClick()"></i> -->
+    </div>
+    <h1>{{ row.artist }}</h1>
+    <!-- <img [src]="row.image"> -->
+    <!-- <div actions>
+      <button class="ui black button" (click)="onClick()">Jazz</button>
+    </div> -->
+  </div>
+</app-modal>
+
+<div class="ui segment">
+  <app-accord [accords]="accords"></app-accord>
 </div>

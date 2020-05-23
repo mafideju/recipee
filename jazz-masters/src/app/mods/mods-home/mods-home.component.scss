@@ -5,10 +5,21 @@
 
 .image-container {
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
   .image {
-    width: 50%;
+    // float: left;
+    width: 25%;
+    cursor: pointer;
+  }
+}
+.header {
+  display: flex;
+  align-items: center!important;
+  justify-content: space-between!important;
+
+  h1 {
+    margin-bottom: -.5rem;
+  }
+  i {
     cursor: pointer;
   }
 }

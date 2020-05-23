@@ -7,3 +7,14 @@
   width: 50%;
   cursor: pointer;
 }
+.header {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.header h1 {
+  margin-bottom: -0.5rem;
+}
+.header i {
+  cursor: pointer;
+}
