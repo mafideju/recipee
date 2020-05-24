@@ -1,0 +1,12 @@
+<form class="form" (submit)="onFormSubmit($event)">
+  <mat-form-field class="form-group">
+    <mat-label>Busque na Wiki!</mat-label>
+    <input
+      matInput
+      placeholder="Michal Jordan"
+      autocomplete="off"
+      (input)="searchTerm = $event.target.value"
+    >
+  </mat-form-field>
+</form>
+{{ searchTerm }}

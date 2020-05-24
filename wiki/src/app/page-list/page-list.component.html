@@ -1,0 +1,16 @@
+<table mat-table class="mat-elevation-z8">
+  <thead mat-header-cell>
+    <tr>Titulo</tr>
+    <tr>Amostra</tr>
+  </thead>
+  <tbody mat-cell>
+    <tr *ngFor="let row of searchResults">
+      <td>
+        {{ row.title }}
+      </td>
+      <td>
+        {{ row.snippet }}
+      </td>
+    </tr>
+  </tbody>
+</table>
