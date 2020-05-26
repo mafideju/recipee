@@ -6,10 +6,10 @@
   <tbody mat-cell>
     <tr *ngFor="let row of searchResults">
       <td>
-        {{ row.title }}
+        <a target="_blank" [href]="'https://en.wikipedia.org?curid=' + row.pageid">{{ row.title }}</a>
       </td>
-      <td>
-        {{ row.snippet }}
+      <td [innerHTML]="row.snippet" >
+        <!-- {{ row.snippet }} -->
       </td>
     </tr>
   </tbody>
