@@ -1,0 +1,9 @@
+<section>
+  <h1>Buscador de Fotos</h1>
+  <button (click)="onFetchPhoto()">Buscar</button>
+  <div *ngFor="let row of photoFetched">
+    <img [src]="row.urls.regular">
+  </div>
+
+</section>
+
