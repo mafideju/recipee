@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -20,16 +22,24 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'password-generator'`, () => {
+  it(`should have a password variable`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('password-generator');
+    expect(app.password).toEqual('');
   });
 
-  it('should render title', () => {
+  it('should have a passwordLength variable', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    fixture.detectChanges();
+    expect(app.passwordLength).toEqual(0);
+  });
+
+  xit('should invalidate lower than zero', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('password-generator app is running!');
+    const component = AppComponent;
+
+    // component.passwordLengthChange();
   });
 });
