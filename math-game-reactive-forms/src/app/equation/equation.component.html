@@ -1,0 +1,24 @@
+<form [formGroup]="mathForm">
+
+  <!-- FORMAS DE SE CHAMAR O VALOR DO FIELD DO FORMULARIO -->
+  <!-- {{ mathForm.get('partA') }} -->
+  <!-- {{ mathForm.controls.partA.value }} -->
+  <!-- {{ mathForm.value.partB }} -->
+
+  <!-- USANDO UM GETTER METHOD -->
+  {{ partA }} + {{ partB }} =
+
+  <input
+    formControlName="answer"
+    />
+    <!-- name="answer" -->
+  <!-- {{ mathForm.value.answer }} -->
+
+  {{ secondsPerSolution | number:'1.1-3' }}
+
+  <div>
+    <h3>formValidation = {{ mathForm.valid | json }}</h3>
+    <h3>formErrorHands = {{ mathForm.errors ? (mathForm.errors | json) : 'Sem Erros' }}</h3>
+  </div>
+
+</form>
