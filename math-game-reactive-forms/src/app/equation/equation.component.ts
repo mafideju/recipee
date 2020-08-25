@@ -44,7 +44,7 @@ export class EquationComponent implements OnInit {
     this.mathForm.statusChanges
       .pipe(
         filter(resp => resp === 'VALID'),
-        delay(600),
+        delay(200),
         scan((acc) => {
           return {
             numberSolved: acc.numberSolved + 1,
@@ -53,7 +53,7 @@ export class EquationComponent implements OnInit {
         }, { numberSolved: 0, startTime: new Date() })
       )
       .subscribe(({ numberSolved, startTime }) => {
-        this.secondsPerSolution = (new Date().getTime() - startTime.getTime()) / numberSolved / 1000
+        this.secondsPerSolution = ( (new Date().getTime() - startTime.getTime()) - 200 ) / numberSolved / 1000
 
         this.mathForm.controls.partA.setValue(this.randomNumber());
         this.mathForm.controls.partB.setValue(this.randomNumber());

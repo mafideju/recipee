@@ -1,24 +1,30 @@
-<form [formGroup]="mathForm">
+<section>
 
-  <!-- FORMAS DE SE CHAMAR O VALOR DO FIELD DO FORMULARIO -->
-  <!-- {{ mathForm.get('partA') }} -->
-  <!-- {{ mathForm.controls.partA.value }} -->
-  <!-- {{ mathForm.value.partB }} -->
+  <form [formGroup]="mathForm">
 
-  <!-- USANDO UM GETTER METHOD -->
-  {{ partA }} + {{ partB }} =
+    <!-- FORMAS DE SE CHAMAR O VALOR DO FIELD DO FORMULARIO -->
+    <!-- {{ mathForm.get('partA') }} -->
+    <!-- {{ mathForm.controls.partA.value }} -->
+    <!-- {{ mathForm.value.partB }} -->
 
-  <input
-    formControlName="answer"
-    />
-    <!-- name="answer" -->
-  <!-- {{ mathForm.value.answer }} -->
+    <article>
+      <div>
+        <!-- USANDO UM GETTER METHOD PARA PEGAR partA E partB -->
+        {{ partA }} + {{ partB }} =
+        <input appHighlightAnswer formControlName="answer" />
+      </div>
 
-  {{ secondsPerSolution | number:'1.1-3' }}
+      <div>
+        {{ secondsPerSolution | number:'1.1-3' }}
+      </div>
+    </article>
 
-  <div>
-    <h3>formValidation = {{ mathForm.valid | json }}</h3>
-    <h3>formErrorHands = {{ mathForm.errors ? (mathForm.errors | json) : 'Sem Erros' }}</h3>
-  </div>
+    <!-- debugging -->
+    <!-- <div>
+      <h3>formValidation = {{ mathForm.valid | json }}</h3>
+      <h3>formErrorHands = {{ mathForm.errors ? (mathForm.errors | json) : 'Sem Erros' }}</h3>
+    </div> -->
 
-</form>
+  </form>
+
+</section>
