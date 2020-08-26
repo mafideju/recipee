@@ -1,0 +1,21 @@
+mat-card {
+  background-color: #bbbbbb;
+  margin: 25% auto;
+  padding: 2rem 3rem 3rem;
+  width: 20rem;
+
+  mat-card-title {
+    margin: 2rem auto;
+    color: #018786;
+  }
+
+  form{
+    mat-form-field{
+      width: 100%;
+
+      input {
+        background-color: #bbbbbb!important;
+      }
+    }
+  }
+}
