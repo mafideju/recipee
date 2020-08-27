@@ -7,11 +7,11 @@
           matInput
           placeholder="Usuário"
           formControlName="username"
+          autocomplete="off"
         />
       </mat-form-field>
 
       error: {{ authForm.controls.username.errors | json }}
-      valid: {{ authForm.controls.username.valid }}
 
       <mat-form-field>
         <mat-label>Senha</mat-label>
@@ -24,7 +24,6 @@
       </mat-form-field>
 
       error: {{ authForm.controls.password.errors | json }}
-      valid: {{ authForm.controls.password.valid }}
 
       <mat-form-field>
         <mat-label>Confirme a senha</mat-label>
@@ -37,7 +36,6 @@
       </mat-form-field>
 
       error: {{ authForm.controls.passwordConfirmation.errors | json }}
-      valid: {{ authForm.controls.passwordConfirmation.valid }}
       formerros: {{ authForm.errors | json }}
 
       <!-- INSERIR UM BOTÃO -->
