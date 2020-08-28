@@ -5,11 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // CUSTOM MODULES
 import { AuthRoutingModule } from './auth-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 // ANGULAR MATERIAL MODULES
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 // APLICATION COMPONENTS
 import { SigninComponent } from './signin/signin.component';
@@ -24,7 +26,9 @@ import { SignupComponent } from './signup/signup.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule,
+    MatButtonModule,
   ]
 })
 export class AuthModule { }

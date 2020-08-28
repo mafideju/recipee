@@ -26,7 +26,9 @@ export class UniqueUsernameController implements AsyncValidator {
       .pipe(
         map(() => null),
         catchError((e) => {
-          console.log('err :>> ', e);
+
+          console.warn('err :>> ', e);
+
           if (e.error.username) {
             // e.error.username === 'Username in use'
             return of({ nonUniqueUsername: true });

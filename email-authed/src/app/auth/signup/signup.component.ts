@@ -41,4 +41,12 @@ export class SignupComponent implements OnInit {
     // console.log('this.authForm :>> ', this.authForm);
   }
 
+  // showErrors() {
+  //   return this.authForm.errors;
+  // }
+
+  onSubmit() {
+    console.log('object :>> ');
+  }
+
 }

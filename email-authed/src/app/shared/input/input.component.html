@@ -1,1 +1,24 @@
-<p>input works!</p>
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [type]="type"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    autocomplete="off"
+  />
+  <mat-error *ngIf="showErrors()">
+    <span *ngIf="control.errors.required">Nome ou Apelido é Obrigatório para o Cadastro</span>
+    <span *ngIf="control.errors.minlength">
+      Campo deve ter, no mínimo, {{ control.errors.minlength.requiredLength }} letras.
+      Atualmente com {{ control.errors.minlength.actualLength }} {{ control.errors.minlength.actualLength === 1 ? 'letra' : 'letras' }}.
+    </span>
+    <span *ngIf="control.errors.maxlength">
+      Campo deve ter, no máximo, {{ control.errors.maxlength.requiredLength }} letras.
+      Atualmente com {{ control.errors.maxlength.actualLength === 1 ? 'letra' : 'letras' }} {{ control.errors.maxlength.actualLength === 1 ? 'letra' : 'letras' }}.
+    </span>
+    <span *ngIf="control.errors.pattern">Apenas letras e números!!!</span>
+    <span *ngIf="control.errors.nonUniqueUsername">Esse nome já está sendo usado!!!</span>
+    <span *ngIf="control.errors.networkError">Deu ruim na sua internet!</span>
+  </mat-error>
+</mat-form-field>

@@ -1,20 +1,27 @@
-mat-card {
-  background-color: #bbbbbb;
-  margin: 25% auto;
-  padding: 2rem 3rem 3rem;
-  width: 20rem;
+section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 
-  mat-card-title {
-    margin: 2rem auto;
-    color: #018786;
-  }
+  mat-card {
+    background-color: #aaaaaa;
+    padding: 2rem 3rem 3rem;
+    width: 20rem;
 
-  form{
-    mat-form-field{
-      width: 100%;
+    mat-card-title {
+      color: #018786;
+      margin: 2rem auto;
+    }
 
-      input {
-        background-color: #bbbbbb!important;
+    form {
+      mat-error {
+        border: 1px solid red;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
       }
     }
   }

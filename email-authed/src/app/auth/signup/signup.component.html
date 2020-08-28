@@ -1,43 +1,40 @@
-<mat-card>
-  <mat-card-title>Crie sua conta!!!</mat-card-title>
-  <form [formGroup]="authForm">
-      <mat-form-field>
-        <mat-label>Usuário</mat-label>
-        <input
-          matInput
-          placeholder="Usuário"
-          formControlName="username"
-          autocomplete="off"
-        />
-      </mat-form-field>
+<section>
+  <mat-card>
+    <mat-card-title>Crie sua conta!!!</mat-card-title>
+    <form [formGroup]="authForm">
 
-      error: {{ authForm.controls.username.errors | json }}
+      <app-input
+        type="text"
+        label="Usuário"
+        placeholder="Como quer ser chamado?"
+        [control]="authForm.controls.username">
+      </app-input>
 
-      <mat-form-field>
-        <mat-label>Senha</mat-label>
-        <input
-          matInput
-          validators
-          placeholder="Senha"
-          formControlName="password"
-        />
-      </mat-form-field>
+      <app-input
+        type="password"
+        label="Senha"
+        placeholder="Entre 4 e 30 caracteres"
+        [control]="authForm.controls.password">
+      </app-input>
 
-      error: {{ authForm.controls.password.errors | json }}
+      <app-input
+        type="password"
+        label="Confirme a Senha"
+        placeholder="A mesma do campo anterior"
+        [control]="authForm.controls.passwordConfirmation">
+      </app-input>
 
-      <mat-form-field>
-        <mat-label>Confirme a senha</mat-label>
-        <input
-          matInput
-          validators
-          placeholder="Confirme a senha"
-          formControlName="passwordConfirmation"
-        />
-      </mat-form-field>
+      <mat-error *ngIf="this.authForm.errors">
+        <div *ngIf="this.authForm.errors.passwordError">Senhas devem ser iguais !!!</div>
+      </mat-error>
 
-      error: {{ authForm.controls.passwordConfirmation.errors | json }}
-      formerros: {{ authForm.errors | json }}
-
-      <!-- INSERIR UM BOTÃO -->
-  </form>
-</mat-card>
+      <div style="width:100%;margin-top:1.5rem;">
+        <button
+          style="width:100%;"
+          mat-raised-button
+          (click)="onSubmit()"
+          color="primary">Cadastre-se</button>
+      </div>
+    </form>
+  </mat-card>
+</section>
